@@ -10,11 +10,15 @@ import RxSwift
 
 class DogFriendListController: UIViewController {
 
+    @IBOutlet weak var petListTableView: UITableView!
+    
+    @IBOutlet weak var actionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-//
+
 }
 
