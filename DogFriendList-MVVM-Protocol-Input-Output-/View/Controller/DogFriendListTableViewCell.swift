@@ -30,5 +30,7 @@ class DogFriendListTableViewCell: UITableViewCell {
     @IBAction func DoActionToPet(_ sender: UIButton) {
     }
     
+    @IBAction func goToAddView(_ sender: UIButton) {
+    }
     
 }

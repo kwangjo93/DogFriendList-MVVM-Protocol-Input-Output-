@@ -22,26 +22,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogFriendListTableViewCell" id="VrF-bf-5Dq" customClass="DogFriendListTableViewCell" customModule="DogFriendList_MVVM_Protocol_Input_Output_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="50.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VrF-bf-5Dq" id="WJ9-fh-dpJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="50.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6e-YO-qb7">
-                                                    <rect key="frame" x="8" y="8" width="42" height="34.666666666666664"/>
+                                                    <rect key="frame" x="8" y="8" width="42" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-ch-Rnf">
-                                                    <rect key="frame" x="66" y="8" width="222" height="34.666666666666664"/>
+                                                    <rect key="frame" x="66" y="8" width="222" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pav-Gc-kbO">
-                                                    <rect key="frame" x="304" y="8" width="49" height="34.666666666666664"/>
+                                                    <rect key="frame" x="304" y="8" width="49" height="35"/>
                                                     <color key="tintColor" systemColor="systemGreenColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="play.square.fill" catalog="system"/>
@@ -80,17 +80,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-Z5-0MW">
+                                <rect key="frame" x="330" y="50" width="47" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="goToAddView:" destination="4B0-lX-kIu" eventType="touchUpInside" id="fjA-sm-ngw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Hi-db-RLO" firstAttribute="top" secondItem="SV3-Nn-yCw" secondAttribute="bottom" constant="32" id="9ka-oq-RoU"/>
+                            <constraint firstItem="EDK-Z5-0MW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="EdY-h8-U49"/>
                             <constraint firstItem="SV3-Nn-yCw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="I1J-zn-bAz"/>
                             <constraint firstItem="2Hi-db-RLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oaq-dN-dDU"/>
+                            <constraint firstItem="EDK-Z5-0MW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="330" id="Rx7-ZJ-xew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDK-Z5-0MW" secondAttribute="trailing" constant="16" id="V9m-kL-tIh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Hi-db-RLO" secondAttribute="trailing" constant="16" id="g0U-vD-Xmz"/>
                             <constraint firstItem="SV3-Nn-yCw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="knv-9o-rmo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Hi-db-RLO" secondAttribute="bottom" constant="16" id="lMI-XV-bcs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SV3-Nn-yCw" secondAttribute="trailing" constant="16" id="tRE-dp-Psd"/>
+                            <constraint firstItem="SV3-Nn-yCw" firstAttribute="top" secondItem="EDK-Z5-0MW" secondAttribute="bottom" id="wD8-YW-w8w"/>
                         </constraints>
                     </view>
                     <connections>
@@ -99,12 +111,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="4B0-lX-kIu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
         <image name="play.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
