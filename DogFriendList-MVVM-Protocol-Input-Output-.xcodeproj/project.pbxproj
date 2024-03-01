@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F94A68F32B919514001D063B /* DependecyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68F22B919514001D063B /* DependecyInjectable.swift */; };
+		F94A68F82B919AC0001D063B /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68F72B919AC0001D063B /* Species.swift */; };
+		F94A68FA2B919CC4001D063B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68F92B919CC4001D063B /* Person.swift */; };
+		F94A68FC2B919D96001D063B /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68FB2B919D96001D063B /* Dog.swift */; };
+		F94A68FE2B919D9D001D063B /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68FD2B919D9D001D063B /* Cat.swift */; };
+		F94A69002B919DA3001D063B /* Moekey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68FF2B919DA3001D063B /* Moekey.swift */; };
+		F94A69022B919DAB001D063B /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69012B919DAB001D063B /* Bird.swift */; };
+		F94A69042B919DB0001D063B /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69032B919DB0001D063B /* Fish.swift */; };
+		F94A69062B919DB3001D063B /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69052B919DB3001D063B /* Rabbit.swift */; };
+		F94A69082B919E1D001D063B /* hamster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69072B919E1D001D063B /* hamster.swift */; };
+		F94A690A2B919E21001D063B /* raccoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69092B919E21001D063B /* raccoon.swift */; };
 		F9BD568A2B909EB0005077EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD56892B909EB0005077EF /* RxCocoa */; };
 		F9BD568C2B909EB0005077EF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568B2B909EB0005077EF /* RxRelay */; };
 		F9BD56902B909EB0005077EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568F2B909EB0005077EF /* RxSwift */; };
@@ -43,6 +53,16 @@
 
 /* Begin PBXFileReference section */
 		F94A68F22B919514001D063B /* DependecyInjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependecyInjectable.swift; sourceTree = "<group>"; };
+		F94A68F72B919AC0001D063B /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		F94A68F92B919CC4001D063B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F94A68FB2B919D96001D063B /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		F94A68FD2B919D9D001D063B /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		F94A68FF2B919DA3001D063B /* Moekey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moekey.swift; sourceTree = "<group>"; };
+		F94A69012B919DAB001D063B /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		F94A69032B919DB0001D063B /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		F94A69052B919DB3001D063B /* Rabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
+		F94A69072B919E1D001D063B /* hamster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hamster.swift; sourceTree = "<group>"; };
+		F94A69092B919E21001D063B /* raccoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raccoon.swift; sourceTree = "<group>"; };
 		F9BD56982B909F1F005077EF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F9BD56A22B90A2D0005077EF /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +95,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F94A68F62B919A96001D063B /* Species */ = {
+			isa = PBXGroup;
+			children = (
+				F94A68F72B919AC0001D063B /* Species.swift */,
+				F94A69072B919E1D001D063B /* hamster.swift */,
+				F94A69092B919E21001D063B /* raccoon.swift */,
+				F94A69032B919DB0001D063B /* Fish.swift */,
+				F94A69052B919DB3001D063B /* Rabbit.swift */,
+				F94A69012B919DAB001D063B /* Bird.swift */,
+				F94A68FF2B919DA3001D063B /* Moekey.swift */,
+				F94A68FB2B919D96001D063B /* Dog.swift */,
+				F94A68FD2B919D9D001D063B /* Cat.swift */,
+			);
+			path = Species;
+			sourceTree = "<group>";
+		};
+		F94A690B2B91A00E001D063B /* AbstractModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD56A22B90A2D0005077EF /* Pet.swift */,
+				F94A68F92B919CC4001D063B /* Person.swift */,
+				F94A68F22B919514001D063B /* DependecyInjectable.swift */,
+			);
+			path = AbstractModel;
+			sourceTree = "<group>";
+		};
 		F9BD56972B909F1E005077EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +159,8 @@
 		F9BD569F2B90A1ED005077EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F9BD56A22B90A2D0005077EF /* Pet.swift */,
-				F94A68F22B919514001D063B /* DependecyInjectable.swift */,
+				F94A690B2B91A00E001D063B /* AbstractModel */,
+				F94A68F62B919A96001D063B /* Species */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,14 +296,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94A68FA2B919CC4001D063B /* Person.swift in Sources */,
+				F94A69082B919E1D001D063B /* hamster.swift in Sources */,
 				F9BD56A52B90A36C005077EF /* DogFriendListViewModel.swift in Sources */,
 				F9BD56A92B90A45C005077EF /* AddListViewController.swift in Sources */,
 				F9C8CCF42B8F870400366300 /* DogFriendListController.swift in Sources */,
 				F9BD56AB2B90B032005077EF /* DogFriendListTableViewCell.swift in Sources */,
+				F94A68FC2B919D96001D063B /* Dog.swift in Sources */,
+				F94A69002B919DA3001D063B /* Moekey.swift in Sources */,
 				F9BD56A32B90A2D0005077EF /* Pet.swift in Sources */,
+				F94A69022B919DAB001D063B /* Bird.swift in Sources */,
 				F9C8CCF02B8F870400366300 /* AppDelegate.swift in Sources */,
+				F94A69042B919DB0001D063B /* Fish.swift in Sources */,
+				F94A69062B919DB3001D063B /* Rabbit.swift in Sources */,
+				F94A68FE2B919D9D001D063B /* Cat.swift in Sources */,
 				F94A68F32B919514001D063B /* DependecyInjectable.swift in Sources */,
+				F94A68F82B919AC0001D063B /* Species.swift in Sources */,
 				F9C8CCF22B8F870400366300 /* SceneDelegate.swift in Sources */,
+				F94A690A2B919E21001D063B /* raccoon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

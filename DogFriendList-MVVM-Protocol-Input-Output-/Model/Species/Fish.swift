@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class Fish: Pet {
+    func eat() -> String {
+        super.eat()
+    }
+    
+    func walkTogether() -> String {
+        return "\(name)은 주인과 함께 산책하지 않습니다."
+    }
+}

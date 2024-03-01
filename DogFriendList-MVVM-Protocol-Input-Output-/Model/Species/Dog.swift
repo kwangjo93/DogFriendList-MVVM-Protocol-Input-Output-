@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class Dog: Pet {
+    func eat() -> String {
+        super.eat()
+    }
+    
+    func walkTogether() -> String {
+        super.walkTogether()
+    }
+}
