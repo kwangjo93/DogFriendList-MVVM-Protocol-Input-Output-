@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class Pet: Animal {
+    var name: String
+    var species: species
+    
+    init(name: String, species: species) {
+        self.name = name
+        self.species = species
+    }
+}
