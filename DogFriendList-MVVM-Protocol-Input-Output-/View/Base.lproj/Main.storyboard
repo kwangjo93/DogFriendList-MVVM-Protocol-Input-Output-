@@ -22,26 +22,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogFriendListTableViewCell" id="VrF-bf-5Dq" customClass="DogFriendListTableViewCell" customModule="DogFriendList_MVVM_Protocol_Input_Output_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="51.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VrF-bf-5Dq" id="WJ9-fh-dpJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="51.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="50.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6e-YO-qb7">
-                                                    <rect key="frame" x="8" y="8" width="42" height="35.333333333333336"/>
+                                                    <rect key="frame" x="8" y="8" width="42" height="34.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-ch-Rnf">
-                                                    <rect key="frame" x="66" y="8" width="222" height="35.333333333333336"/>
+                                                    <rect key="frame" x="66" y="8" width="222" height="34.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pav-Gc-kbO">
-                                                    <rect key="frame" x="304" y="8" width="49" height="35.333333333333336"/>
+                                                    <rect key="frame" x="304" y="8" width="49" height="34.666666666666664"/>
                                                     <color key="tintColor" systemColor="systemGreenColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="play.square.fill" catalog="system"/>
@@ -109,6 +109,7 @@
                     <connections>
                         <outlet property="actionLabel" destination="2Hi-db-RLO" id="eBW-6N-obj"/>
                         <outlet property="petListTableView" destination="SV3-Nn-yCw" id="0f3-YH-cxw"/>
+                        <outlet property="plusButton" destination="EDK-Z5-0MW" id="Jzi-5b-4Oa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
