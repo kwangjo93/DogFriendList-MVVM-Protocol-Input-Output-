@@ -17,6 +17,9 @@ class AddListViewController: UIViewController {
     @IBOutlet weak var petSpeciesPicker: UIPickerView!
     
     @IBOutlet weak var petImageView: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

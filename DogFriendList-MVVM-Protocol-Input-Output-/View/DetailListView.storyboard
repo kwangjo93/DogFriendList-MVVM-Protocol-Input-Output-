@@ -99,6 +99,7 @@
                         <outlet property="petImageView" destination="aHk-Ku-beU" id="aDq-uO-tK2"/>
                         <outlet property="petNameTextField" destination="W11-yp-6u9" id="6y5-DY-GMt"/>
                         <outlet property="petSpeciesPicker" destination="6V4-GQ-iWV" id="dlm-DE-arz"/>
+                        <outlet property="saveButton" destination="4aC-DY-CLD" id="DJS-IT-kgw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

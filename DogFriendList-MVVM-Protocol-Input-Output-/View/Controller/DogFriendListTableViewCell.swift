@@ -16,6 +16,8 @@ class DogFriendListTableViewCell: UITableViewCell {
     @IBOutlet weak var petActionButton: UIButton!
     
     
+    @IBAction func plusButton(_ sender: UIButton) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,10 +29,4 @@ class DogFriendListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    @IBAction func DoActionToPet(_ sender: UIButton) {
-    }
-    
-    @IBAction func goToAddView(_ sender: UIButton) {
-    }
-    
 }

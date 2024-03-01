@@ -18,12 +18,6 @@
 		F94A69062B919DB3001D063B /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69052B919DB3001D063B /* Rabbit.swift */; };
 		F94A69082B919E1D001D063B /* hamster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69072B919E1D001D063B /* hamster.swift */; };
 		F94A690A2B919E21001D063B /* raccoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A69092B919E21001D063B /* raccoon.swift */; };
-		F9BD568A2B909EB0005077EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD56892B909EB0005077EF /* RxCocoa */; };
-		F9BD568C2B909EB0005077EF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568B2B909EB0005077EF /* RxRelay */; };
-		F9BD56902B909EB0005077EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568F2B909EB0005077EF /* RxSwift */; };
-		F9BD56942B909EB0005077EF /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD56932B909EB0005077EF /* RxTest */; };
-		F9BD56992B909F1F005077EF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD56982B909F1F005077EF /* XCTest.framework */; };
-		F9BD569A2B909F1F005077EF /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD56982B909F1F005077EF /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9BD56A32B90A2D0005077EF /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56A22B90A2D0005077EF /* Pet.swift */; };
 		F9BD56A52B90A36C005077EF /* DogFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */; };
 		F9BD56A72B90A448005077EF /* DetailListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BD56A62B90A448005077EF /* DetailListView.storyboard */; };
@@ -38,13 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F9BD569B2B909F1F005077EF /* Embed Frameworks */ = {
+		F94A69112B91A5DA001D063B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F9BD569A2B909F1F005077EF /* XCTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +56,6 @@
 		F94A69052B919DB3001D063B /* Rabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
 		F94A69072B919E1D001D063B /* hamster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hamster.swift; sourceTree = "<group>"; };
 		F94A69092B919E21001D063B /* raccoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raccoon.swift; sourceTree = "<group>"; };
-		F9BD56982B909F1F005077EF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F9BD56A22B90A2D0005077EF /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListViewModel.swift; sourceTree = "<group>"; };
 		F9BD56A62B90A448005077EF /* DetailListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailListView.storyboard; sourceTree = "<group>"; };
@@ -84,11 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BD568C2B909EB0005077EF /* RxRelay in Frameworks */,
-				F9BD568A2B909EB0005077EF /* RxCocoa in Frameworks */,
-				F9BD56992B909F1F005077EF /* XCTest.framework in Frameworks */,
-				F9BD56902B909EB0005077EF /* RxSwift in Frameworks */,
-				F9BD56942B909EB0005077EF /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,14 +106,6 @@
 				F94A68F22B919514001D063B /* DependecyInjectable.swift */,
 			);
 			path = AbstractModel;
-			sourceTree = "<group>";
-		};
-		F9BD56972B909F1E005077EF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F9BD56982B909F1F005077EF /* XCTest.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F9BD569C2B90A1E5005077EF /* App */ = {
@@ -189,7 +168,6 @@
 			children = (
 				F9C8CCEE2B8F870400366300 /* DogFriendList-MVVM-Protocol-Input-Output- */,
 				F9C8CCED2B8F870400366300 /* Products */,
-				F9BD56972B909F1E005077EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,7 +202,7 @@
 				F9C8CCE82B8F870400366300 /* Sources */,
 				F9C8CCE92B8F870400366300 /* Frameworks */,
 				F9C8CCEA2B8F870400366300 /* Resources */,
-				F9BD569B2B909F1F005077EF /* Embed Frameworks */,
+				F94A69112B91A5DA001D063B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,10 +210,6 @@
 			);
 			name = "DogFriendList-MVVM-Protocol-Input-Output-";
 			packageProductDependencies = (
-				F9BD56892B909EB0005077EF /* RxCocoa */,
-				F9BD568B2B909EB0005077EF /* RxRelay */,
-				F9BD568F2B909EB0005077EF /* RxSwift */,
-				F9BD56932B909EB0005077EF /* RxTest */,
 			);
 			productName = "DogFriendList-MVVM-Protocol-Input-Output-";
 			productReference = F9C8CCEC2B8F870400366300 /* DogFriendList-MVVM-Protocol-Input-Output-.app */;
@@ -557,29 +531,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F9BD56892B909EB0005077EF /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9BD56882B909EB0005077EF /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		F9BD568B2B909EB0005077EF /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9BD56882B909EB0005077EF /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		F9BD568F2B909EB0005077EF /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9BD56882B909EB0005077EF /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		F9BD56932B909EB0005077EF /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9BD56882B909EB0005077EF /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9C8CCE42B8F870400366300 /* Project object */;
 }
