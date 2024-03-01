@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F94A68F32B919514001D063B /* DependecyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94A68F22B919514001D063B /* DependecyInjectable.swift */; };
 		F9BD568A2B909EB0005077EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD56892B909EB0005077EF /* RxCocoa */; };
 		F9BD568C2B909EB0005077EF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568B2B909EB0005077EF /* RxRelay */; };
 		F9BD56902B909EB0005077EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD568F2B909EB0005077EF /* RxSwift */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F94A68F22B919514001D063B /* DependecyInjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependecyInjectable.swift; sourceTree = "<group>"; };
 		F9BD56982B909F1F005077EF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F9BD56A22B90A2D0005077EF /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListViewModel.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F9BD56A22B90A2D0005077EF /* Pet.swift */,
+				F94A68F22B919514001D063B /* DependecyInjectable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F9BD56AB2B90B032005077EF /* DogFriendListTableViewCell.swift in Sources */,
 				F9BD56A32B90A2D0005077EF /* Pet.swift in Sources */,
 				F9C8CCF02B8F870400366300 /* AppDelegate.swift in Sources */,
+				F94A68F32B919514001D063B /* DependecyInjectable.swift in Sources */,
 				F9C8CCF22B8F870400366300 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
