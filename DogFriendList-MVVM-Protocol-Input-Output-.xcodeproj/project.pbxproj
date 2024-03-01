@@ -13,9 +13,14 @@
 		F9BD56942B909EB0005077EF /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9BD56932B909EB0005077EF /* RxTest */; };
 		F9BD56992B909F1F005077EF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD56982B909F1F005077EF /* XCTest.framework */; };
 		F9BD569A2B909F1F005077EF /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD56982B909F1F005077EF /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9BD56A32B90A2D0005077EF /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56A22B90A2D0005077EF /* Pet.swift */; };
+		F9BD56A52B90A36C005077EF /* DogFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */; };
+		F9BD56A72B90A448005077EF /* DetailListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BD56A62B90A448005077EF /* DetailListView.storyboard */; };
+		F9BD56A92B90A45C005077EF /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56A82B90A45C005077EF /* AddListViewController.swift */; };
+		F9BD56AB2B90B032005077EF /* DogFriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD56AA2B90B032005077EF /* DogFriendListTableViewCell.swift */; };
 		F9C8CCF02B8F870400366300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8CCEF2B8F870400366300 /* AppDelegate.swift */; };
 		F9C8CCF22B8F870400366300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8CCF12B8F870400366300 /* SceneDelegate.swift */; };
-		F9C8CCF42B8F870400366300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8CCF32B8F870400366300 /* ViewController.swift */; };
+		F9C8CCF42B8F870400366300 /* DogFriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8CCF32B8F870400366300 /* DogFriendListController.swift */; };
 		F9C8CCF72B8F870400366300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C8CCF52B8F870400366300 /* Main.storyboard */; };
 		F9C8CCF92B8F870500366300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C8CCF82B8F870500366300 /* Assets.xcassets */; };
 		F9C8CCFC2B8F870500366300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C8CCFA2B8F870500366300 /* LaunchScreen.storyboard */; };
@@ -37,10 +42,15 @@
 
 /* Begin PBXFileReference section */
 		F9BD56982B909F1F005077EF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F9BD56A22B90A2D0005077EF /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListViewModel.swift; sourceTree = "<group>"; };
+		F9BD56A62B90A448005077EF /* DetailListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailListView.storyboard; sourceTree = "<group>"; };
+		F9BD56A82B90A45C005077EF /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
+		F9BD56AA2B90B032005077EF /* DogFriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListTableViewCell.swift; sourceTree = "<group>"; };
 		F9C8CCEC2B8F870400366300 /* DogFriendList-MVVM-Protocol-Input-Output-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogFriendList-MVVM-Protocol-Input-Output-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C8CCEF2B8F870400366300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9C8CCF12B8F870400366300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9C8CCF32B8F870400366300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9C8CCF32B8F870400366300 /* DogFriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFriendListController.swift; sourceTree = "<group>"; };
 		F9C8CCF62B8F870400366300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9C8CCF82B8F870500366300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9C8CCFB2B8F870500366300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +81,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9BD569C2B90A1E5005077EF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F9C8CCEF2B8F870400366300 /* AppDelegate.swift */,
+				F9C8CCF12B8F870400366300 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F9BD569D2B90A1E8005077EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD56A12B90A2B8005077EF /* Controller */,
+				F9C8CCF52B8F870400366300 /* Main.storyboard */,
+				F9BD56A62B90A448005077EF /* DetailListView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9BD569E2B90A1E9005077EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD56A42B90A36C005077EF /* DogFriendListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9BD569F2B90A1ED005077EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD56A22B90A2D0005077EF /* Pet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9BD56A02B90A242005077EF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F9C8CCF82B8F870500366300 /* Assets.xcassets */,
+				F9C8CCFA2B8F870500366300 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F9BD56A12B90A2B8005077EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD56AA2B90B032005077EF /* DogFriendListTableViewCell.swift */,
+				F9C8CCF32B8F870400366300 /* DogFriendListController.swift */,
+				F9BD56A82B90A45C005077EF /* AddListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F9C8CCE32B8F870400366300 = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +155,12 @@
 		F9C8CCEE2B8F870400366300 /* DogFriendList-MVVM-Protocol-Input-Output- */ = {
 			isa = PBXGroup;
 			children = (
-				F9C8CCEF2B8F870400366300 /* AppDelegate.swift */,
-				F9C8CCF12B8F870400366300 /* SceneDelegate.swift */,
-				F9C8CCF32B8F870400366300 /* ViewController.swift */,
-				F9C8CCF52B8F870400366300 /* Main.storyboard */,
-				F9C8CCF82B8F870500366300 /* Assets.xcassets */,
-				F9C8CCFA2B8F870500366300 /* LaunchScreen.storyboard */,
 				F9C8CCFD2B8F870500366300 /* Info.plist */,
+				F9BD569C2B90A1E5005077EF /* App */,
+				F9BD56A02B90A242005077EF /* Resource */,
+				F9BD569F2B90A1ED005077EF /* Model */,
+				F9BD569E2B90A1E9005077EF /* ViewModel */,
+				F9BD569D2B90A1E8005077EF /* View */,
 			);
 			path = "DogFriendList-MVVM-Protocol-Input-Output-";
 			sourceTree = "<group>";
@@ -172,6 +235,7 @@
 			files = (
 				F9C8CCFC2B8F870500366300 /* LaunchScreen.storyboard in Resources */,
 				F9C8CCF92B8F870500366300 /* Assets.xcassets in Resources */,
+				F9BD56A72B90A448005077EF /* DetailListView.storyboard in Resources */,
 				F9C8CCF72B8F870400366300 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C8CCF42B8F870400366300 /* ViewController.swift in Sources */,
+				F9BD56A52B90A36C005077EF /* DogFriendListViewModel.swift in Sources */,
+				F9BD56A92B90A45C005077EF /* AddListViewController.swift in Sources */,
+				F9C8CCF42B8F870400366300 /* DogFriendListController.swift in Sources */,
+				F9BD56AB2B90B032005077EF /* DogFriendListTableViewCell.swift in Sources */,
+				F9BD56A32B90A2D0005077EF /* Pet.swift in Sources */,
 				F9C8CCF02B8F870400366300 /* AppDelegate.swift in Sources */,
 				F9C8CCF22B8F870400366300 /* SceneDelegate.swift in Sources */,
 			);
@@ -359,7 +427,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -392,7 +460,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
