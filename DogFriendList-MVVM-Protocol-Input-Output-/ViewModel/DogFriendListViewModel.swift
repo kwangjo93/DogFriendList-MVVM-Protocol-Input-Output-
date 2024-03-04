@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import UIKit
 
 final class DogFriendListViewModel: ViewModelType {
     struct Input {
@@ -23,16 +22,4 @@ final class DogFriendListViewModel: ViewModelType {
     
             return Output()
        }
-
-    private func goToNextVC(storyBoard: UIStoryboard?, fromCurrentVC: UIViewController, animated: Bool) {
-        guard let secondVC = storyBoard?
-            .instantiateViewController(identifier: "AddListViewController", creator: { coder in
-                AddListViewController() })
-        else {
-            fatalError("SecondViewController 생성 에러")
-        }
-        
-        secondVC.modalPresentationStyle = .fullScreen
-        fromCurrentVC.present(secondVC, animated: true, completion: nil)
-    }
 }

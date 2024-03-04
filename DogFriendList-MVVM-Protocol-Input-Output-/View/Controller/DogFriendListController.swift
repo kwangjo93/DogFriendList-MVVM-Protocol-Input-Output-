@@ -15,8 +15,8 @@ class DogFriendListController: UIViewController {
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     var disposeBag: DisposeBag = DisposeBag()
-    let DogFriendListVM = DogFriendListViewModel()
-    
+    let dogFriendListVM = DogFriendListViewModel()
+    let addListVM = AddListViewModel()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class DogFriendListController: UIViewController {
     private func bindViewModel() {
         let input = DogFriendListViewModel.Input()
         
-        let output = DogFriendListVM.transform(input: input)
+        let output = dogFriendListVM.transform(input: input)
         
         plusButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -39,6 +39,7 @@ class DogFriendListController: UIViewController {
     private func goToNextVC() {
         let storyboard = UIStoryboard(name: "AddView", bundle: nil)
         if let nextVC = storyboard.instantiateViewController(withIdentifier: "AddListViewController") as? AddListViewController {
+            nextVC.addListVM = addListVM
             self.present(nextVC, animated: true, completion: nil)
         }
     }
