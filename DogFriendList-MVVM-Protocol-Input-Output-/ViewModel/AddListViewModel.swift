@@ -13,20 +13,19 @@ class AddListViewModel: ViewModelType {
     struct Input {
         let friendName: ControlProperty<String?>
         let petname: ControlProperty<String?>
-        let selectedValue: String?
-        let petImage: UIImage?
+        let selectedValue: Observable<String?>
         let saveButtonTap: ControlEvent<Void>
     }
     
     struct Output {
-        let selectedValue: String?
+        let selectedValue: Observable<String?>
         let saveButtonTap: ControlEvent<Void>
     }
     
     var listData: [Person] = []
     private var friendName: String?
     private var petname: String?
-    var selectedValue: String?
+    var selectedValue = BehaviorSubject<String?>(value: nil)
     var disposeBag: DisposeBag = DisposeBag()
     
     func transform(input: Input) -> Output {
@@ -44,39 +43,115 @@ class AddListViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
     
-        return Output(selectedValue: input.selectedValue,saveButtonTap: input.saveButtonTap)
+        return Output(selectedValue: selectedValue, saveButtonTap: input.saveButtonTap)
     }
     
     // MARK: - Method
 // selectedValue 값에 따라 이미지의 name을 리턴
 // 버튼 클릭 시 데이터를 저장하는 메서드
     
-    func getSelecImage() -> UIImage {
-        guard let selectedValue else { return UIImage(systemName: "x.circle")! }
+    func getSelectedImage(selectedValue: String) -> UIImage? {
         switch selectedValue {
-        case "hamster":
-            return UIImage(named: "hamster") ?? UIImage(systemName: "x.circle")!
-        case "raccoon":
-            return UIImage(named: "raccoon") ?? UIImage(systemName: "x.circle")!
-        case "fish":
-            return UIImage(named: "fish") ?? UIImage(systemName: "x.circle")!
-        case "rabbit":
-            return UIImage(named: "rabbit") ?? UIImage(systemName: "x.circle")!
-        case "bird":
-            return UIImage(named: "bird") ?? UIImage(systemName: "x.circle")!
-        case "monkey":
-            return UIImage(named: "monkey") ?? UIImage(systemName: "x.circle")!
-        case "dog":
-            return UIImage(named: "dog") ?? UIImage(systemName: "x.circle")!
-        case "cat":
-            return UIImage(named: "cat") ?? UIImage(systemName: "x.circle")!
+        case "햄스터":
+            return UIImage(named: "hamster")
+        case "라쿤":
+            return UIImage(named: "raccoon")
+        case "물고기":
+            return UIImage(named: "fish")
+        case "토끼":
+            return UIImage(named: "rabbit")
+        case "새":
+            return UIImage(named: "bird")
+        case "원숭이":
+            return UIImage(named: "monkey")
+        case "개":
+            return UIImage(named: "dog")
+        case "고양이":
+            return UIImage(named: "cat")
         default:
             print("잘못된 문자열")
-            return UIImage(systemName: "x.circle")!
+            return nil
         }
     }
     
     func saveListData() {
-        
+        let pet = Pet(name: petname ?? "", species: getSpeciesData())
+        guard let petData = defineSpeciesFromPet(pet) else { return }
+        switch checkDuplicationData() {
+        case true:
+            if let index = listData.firstIndex(where: { $0.name == friendName }) {
+                listData[index].pet.insert(petData, at: 0)
+            } else {
+                break
+            }
+        case false:
+            let person = Person(name: friendName ?? "", pet: [petData])
+            listData.append(person)
+        }
     }
+    
+    private func checkDuplicationData() -> Bool {
+        if listData.contains(where: { $0.name == friendName}) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    private func getSpeciesData() -> Species {
+        var species: Species = .dog
+        _ = selectedValue.subscribe(onNext: { value in
+            let selectedValue = value
+            switch selectedValue {
+            case "햄스터":
+                species = .hamster
+            case "라쿤":
+                species = .raccoon
+            case "물고기":
+                species = .fish
+            case "토끼":
+                species = .rabbit
+            case "새":
+                species = .bird
+            case "원숭이":
+                species = .monkey
+            case "개":
+                species = .dog
+            case "고양이":
+                species = .cat
+            default:
+                species = .dog
+            }
+        })
+        return species
+    }
+
+    private func defineSpeciesFromPet(_ pet: Pet) -> Pet? {
+        var pet: Pet?
+        _ = selectedValue.subscribe(onNext: { value in
+            let selectedValue = value
+            switch selectedValue {
+            case "햄스터":
+                pet = pet as? Hamster
+            case "라쿤":
+                pet = pet as? Raccoon
+            case "물고기":
+                pet = pet as? Fish
+            case "토끼":
+                pet = pet as? Rabbit
+            case "새":
+                pet = pet as? Bird
+            case "원숭이":
+                pet = pet as? Monkey
+            case "개":
+                pet = pet as? Dog
+            case "고양이":
+                pet = pet as? Cat
+            default:
+                pet = pet as? Dog
+            }
+        })
+        return pet
+    }
+
 }

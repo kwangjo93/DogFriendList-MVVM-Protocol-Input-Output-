@@ -33,21 +33,24 @@ class AddListViewController: UIViewController {
         let input = AddListViewModel.Input(friendName: friendNameTextField.rx.text,
                                            petname: petNameTextField.rx.text,
                                            selectedValue: addListVM.selectedValue,
-                                           petImage: petImageView.image,
                                            saveButtonTap: saveButton.rx.tap)
         
         let output = addListVM.transform(input: input)
         
-        
+        output.selectedValue
+            .subscribe(onNext: { [weak self] selectedValue in
+                guard let self = self else { return }
+                let petImage = self.addListVM?.getSelectedImage(selectedValue: selectedValue ?? "")
+                self.petImageView.image = petImage
+            })
+            .disposed(by: disposeBag)
         
         output.saveButtonTap
             .withUnretained(self)
-            .subscribe { vc, _ in
-                // 버튼 클릭 시 데이터 저장메서드.
+            .subscribe { _, _ in
+                addListVM.saveListData()
             }
             .disposed(by: disposeBag)
-        
-        
     }
 }
 
@@ -66,7 +69,7 @@ extension AddListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
             let selectedOption = pickerData[row]
-            addListVM?.selectedValue = selectedOption
+            addListVM?.selectedValue.onNext(selectedOption)
         }
     
 }

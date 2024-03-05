@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum species: String {
+enum Species: String {
     case dog
     case cat
     case monkey

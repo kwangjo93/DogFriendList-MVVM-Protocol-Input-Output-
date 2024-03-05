@@ -9,9 +9,9 @@ import Foundation
 
 class Pet: Animal {
     var name: String
-    var species: species
+    var species: Species
     
-    init(name: String, species: species) {
+    init(name: String, species: Species) {
         self.name = name
         self.species = species
     }
