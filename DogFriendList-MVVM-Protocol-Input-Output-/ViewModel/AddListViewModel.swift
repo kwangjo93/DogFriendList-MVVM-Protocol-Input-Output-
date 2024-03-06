@@ -15,20 +15,14 @@ class AddListViewModel: ViewModelType {
         let petname: ControlProperty<String?>
         let selectedValue: Observable<String?>
         let saveButtonTap: ControlEvent<Void>
+        let backBUttonTap: ControlEvent<Void>
     }
     
     struct Output {
         let selectedValue: Observable<String?>
         let saveButtonTap: ControlEvent<Void>
+        let backBUttonTap: ControlEvent<Void>
     }
-    
-    private var listData: [Person] = []
-    var observableListData: BehaviorSubject<[Person]>?
-    var selectedValue = BehaviorSubject<String?>(value: nil)
-    var disposeBag: DisposeBag = DisposeBag()
-    
-    private var friendName: String?
-    private var petname: String?
     
     func transform(input: Input) -> Output {
         input.friendName
@@ -45,9 +39,21 @@ class AddListViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
     
-        return Output(selectedValue: selectedValue, saveButtonTap: input.saveButtonTap)
+        return Output(selectedValue: selectedValue,
+                      saveButtonTap: input.saveButtonTap,
+                      backBUttonTap: input.backBUttonTap)
     }
     
+    var listData: [Person] = []
+    var selectedValue = BehaviorSubject<String?>(value: nil)
+    var disposeBag: DisposeBag = DisposeBag()
+    var observableListData: BehaviorSubject<[Person]>
+    private var friendName: String?
+    private var petname: String?
+    
+    init(observableListData: BehaviorSubject<[Person]>) {
+        self.observableListData = observableListData
+    }
     // MARK: - Method
     func getSelectedImage(selectedValue: String) -> UIImage? {
         switch selectedValue {
@@ -87,6 +93,7 @@ class AddListViewModel: ViewModelType {
             let person = Person(name: friendName ?? "", pet: [specificPet])
             listData.append(person)
         }
+        observableListData.onNext(listData)
         backToPreviousView(view: view)
     }
     
@@ -154,10 +161,7 @@ class AddListViewModel: ViewModelType {
         return petCopy
     }
 
-
     func backToPreviousView(view:UIViewController) {
-        observableListData?.onNext(self.listData)
         view.dismiss(animated: true)
     }
-
 }

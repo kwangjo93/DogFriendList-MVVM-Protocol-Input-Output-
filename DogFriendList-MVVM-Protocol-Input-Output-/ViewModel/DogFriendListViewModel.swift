@@ -11,16 +11,21 @@ import RxCocoa
 
 final class DogFriendListViewModel: ViewModelType {
     struct Input {
-        let listData: Observable<[Person]>?
+        let plusButtonTap: ControlEvent<Void>
+        let listData: BehaviorSubject<[Person]>
     }
     
     struct Output {
-        let listData: Observable<[Person]>?
+        let plusButtonTap: ControlEvent<Void>
+        let listData: BehaviorSubject<[Person]>
     }
     
-    var disposeBag: DisposeBag = DisposeBag()
-    
     func transform(input: Input) -> Output {
-        return Output(listData: input.listData)
-       }
+        return Output(plusButtonTap: input.plusButtonTap,
+                      listData: observableListData)
+        
+    }
+
+    var disposeBag: DisposeBag = DisposeBag()
+    var observableListData: BehaviorSubject<[Person]> = BehaviorSubject(value: [])
 }
