@@ -16,6 +16,7 @@ class AddListViewController: UIViewController {
     @IBOutlet weak var petSpeciesPicker: UIPickerView!
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     var addListVM: AddListViewModel?
     var disposeBag: DisposeBag = DisposeBag()
     let pickerData = ["햄스터", "라쿤", "물고기", "토끼", "새", "원숭이", "개", "고양이"]
@@ -29,13 +30,18 @@ class AddListViewController: UIViewController {
     // MARK: - Helper
     private func bindViewModel() {
         guard let addListVM = addListVM else { return }
-        
         let input = AddListViewModel.Input(friendName: friendNameTextField.rx.text,
                                            petname: petNameTextField.rx.text,
                                            selectedValue: addListVM.selectedValue,
                                            saveButtonTap: saveButton.rx.tap)
         
         let output = addListVM.transform(input: input)
+        
+        backButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
         
         output.selectedValue
             .subscribe(onNext: { [weak self] selectedValue in
@@ -48,7 +54,7 @@ class AddListViewController: UIViewController {
         output.saveButtonTap
             .withUnretained(self)
             .subscribe { _, _ in
-                addListVM.saveListData()
+                addListVM.saveListData(view: self)
             }
             .disposed(by: disposeBag)
     }

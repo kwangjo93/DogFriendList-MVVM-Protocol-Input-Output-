@@ -22,11 +22,13 @@ class AddListViewModel: ViewModelType {
         let saveButtonTap: ControlEvent<Void>
     }
     
-    var listData: [Person] = []
-    private var friendName: String?
-    private var petname: String?
+    private var listData: [Person] = []
+    var observableListData: BehaviorSubject<[Person]>?
     var selectedValue = BehaviorSubject<String?>(value: nil)
     var disposeBag: DisposeBag = DisposeBag()
+    
+    private var friendName: String?
+    private var petname: String?
     
     func transform(input: Input) -> Output {
         input.friendName
@@ -47,9 +49,6 @@ class AddListViewModel: ViewModelType {
     }
     
     // MARK: - Method
-// selectedValue 값에 따라 이미지의 name을 리턴
-// 버튼 클릭 시 데이터를 저장하는 메서드
-    
     func getSelectedImage(selectedValue: String) -> UIImage? {
         switch selectedValue {
         case "햄스터":
@@ -74,20 +73,21 @@ class AddListViewModel: ViewModelType {
         }
     }
     
-    func saveListData() {
+    func saveListData(view:UIViewController) {
         let pet = Pet(name: petname ?? "", species: getSpeciesData())
-        guard let petData = defineSpeciesFromPet(pet) else { return }
+        let specificPet = defineSpeciesFromPet(pet)
         switch checkDuplicationData() {
         case true:
             if let index = listData.firstIndex(where: { $0.name == friendName }) {
-                listData[index].pet.insert(petData, at: 0)
+                listData[index].pet.insert(specificPet, at: 0)
             } else {
                 break
             }
         case false:
-            let person = Person(name: friendName ?? "", pet: [petData])
+            let person = Person(name: friendName ?? "", pet: [specificPet])
             listData.append(person)
         }
+        backToPreviousView(view: view)
     }
     
     private func checkDuplicationData() -> Bool {
@@ -126,32 +126,38 @@ class AddListViewModel: ViewModelType {
         return species
     }
 
-    private func defineSpeciesFromPet(_ pet: Pet) -> Pet? {
-        var pet: Pet?
+    private func defineSpeciesFromPet(_ pet: Pet) -> Pet {
+        var petCopy = pet
         _ = selectedValue.subscribe(onNext: { value in
             let selectedValue = value
             switch selectedValue {
             case "햄스터":
-                pet = pet as? Hamster
+                petCopy = Hamster(name: pet.name, species: pet.species)
             case "라쿤":
-                pet = pet as? Raccoon
+                petCopy = Raccoon(name: pet.name, species: pet.species)
             case "물고기":
-                pet = pet as? Fish
+                petCopy = Fish(name: pet.name, species: pet.species)
             case "토끼":
-                pet = pet as? Rabbit
+                petCopy = Rabbit(name: pet.name, species: pet.species)
             case "새":
-                pet = pet as? Bird
+                petCopy = Bird(name: pet.name, species: pet.species)
             case "원숭이":
-                pet = pet as? Monkey
+                petCopy = Monkey(name: pet.name, species: pet.species)
             case "개":
-                pet = pet as? Dog
+                petCopy = Dog(name: pet.name, species: pet.species)
             case "고양이":
-                pet = pet as? Cat
+                petCopy = Cat(name: pet.name, species: pet.species)
             default:
-                pet = pet as? Dog
+                petCopy = Dog(name: pet.name, species: pet.species)
             }
         })
-        return pet
+        return petCopy
+    }
+
+
+    func backToPreviousView(view:UIViewController) {
+        observableListData?.onNext(self.listData)
+        view.dismiss(animated: true)
     }
 
 }

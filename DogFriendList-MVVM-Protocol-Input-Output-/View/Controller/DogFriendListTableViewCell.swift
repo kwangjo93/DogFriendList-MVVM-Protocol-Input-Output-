@@ -17,6 +17,7 @@ class DogFriendListTableViewCell: UITableViewCell {
     
     
     @IBAction func plusButton(_ sender: UIButton) {
+        
     }
     
     override func awakeFromNib() {
@@ -29,4 +30,13 @@ class DogFriendListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func configure(with person: Person, index: Int) {
+        if let firstPet = person.pet.first {
+            personLabel.text = person.name
+            petLabel.text = firstPet.name
+        } else {
+            personLabel.text = ""
+            petLabel.text = person.pet[index].name
+        }
+    }
 }
