@@ -9,14 +9,6 @@ import Foundation
 
 protocol Animal {
     var name: String { get set}
-}
-
-extension Animal {
-    func eat() -> String {
-        return "\(name) 이 사료를 먹습니다."
-    }
-    
-    func walkTogether() -> String {
-        return "\(name)이 함께 걷는 것을 좋아합니다."
-    }
+    func eat() -> String
+    func walkTogether() -> String
 }

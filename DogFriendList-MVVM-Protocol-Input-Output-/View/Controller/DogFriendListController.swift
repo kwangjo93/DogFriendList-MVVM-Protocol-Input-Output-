@@ -12,7 +12,8 @@ import RxCocoa
 class DogFriendListController: UIViewController {
     // MARK: - Property
     @IBOutlet weak var petListTableView: UITableView!
-    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var eatLabel: UILabel!
+    @IBOutlet weak var walkLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     var disposeBag: DisposeBag = DisposeBag()
     let dogFriendListVM = DogFriendListViewModel()
@@ -65,9 +66,15 @@ extension DogFriendListController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DogFriendListTableViewCell.identifier, for: indexPath) as! DogFriendListTableViewCell
-            let person = addListVM.listData[indexPath.section]
-            let pet = person.pet[indexPath.row]
-            cell.pet = pet
+        let person = addListVM.listData[indexPath.section]
+        let pet = person.pet[indexPath.row]
+        cell.pet = pet
+        cell.eatActionData = { [weak self] data in
+            self?.eatLabel.text = data
+        }
+        cell.walkActionData = { [weak self] data in
+            self?.walkLabel.text = data
+        }
         return cell
     }
     

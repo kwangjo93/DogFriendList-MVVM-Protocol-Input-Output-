@@ -8,11 +8,11 @@
 import Foundation
 
 class Dog: Pet {
-    func eat() -> String {
+    override func eat() -> String {
         super.eat()
     }
     
-    func walkTogether() -> String {
+    override func walkTogether() -> String {
         super.walkTogether()
     }
 }

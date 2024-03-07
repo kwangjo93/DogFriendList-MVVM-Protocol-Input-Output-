@@ -16,12 +16,12 @@ class Person: Animal {
         self.pet = pet
     }
  
-    func eat(index: Int) -> String {
-        return "\(name)은 \(pet[index].name)의 사료를 먹지 않고, 음식을 먹습니다."
+    func eat() -> String {
+        return "\(name)은 사료를 먹지 않고, 음식을 먹습니다."
     }
     
-    func walkTogether(index: Int) -> String {
-        return  "\(name)은 \(pet[index].name)과 함께 걷는 것을 좋아합니다."
+    func walkTogether() -> String {
+        return  "\(name)은 함께 걷는 것을 좋아합니다."
     }
     
 }

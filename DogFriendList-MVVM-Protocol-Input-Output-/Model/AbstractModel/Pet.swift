@@ -15,4 +15,12 @@ class Pet: Animal {
         self.name = name
         self.species = species
     }
+
+    func eat() -> String {
+        return "\(name) 이 사료를 먹습니다."
+    }
+    
+    func walkTogether() -> String {
+        return "\(name)이 함께 걷는 것을 좋아합니다."
+    }
 }

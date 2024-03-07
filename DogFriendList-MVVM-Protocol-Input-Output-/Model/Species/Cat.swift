@@ -8,11 +8,11 @@
 import Foundation
 
 class Cat: Pet {
-    func eat() -> String {
+    override func eat() -> String {
         super.eat()
     }
     
-    func walkTogether() -> String {
+    override func walkTogether() -> String {
         return "\(name)은 산책을 좋아하지 않습니다."
     }
 }
