@@ -12,13 +12,13 @@
         <!--Add List View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="AddListViewController" customModule="DogFriendList_MVVM_Protocol_Input_Output_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddListViewController" id="Y6W-OH-hqX" customClass="AddListViewController" customModule="DogFriendList_MVVM_Protocol_Input_Output_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on1-oV-FWk">
-                                <rect key="frame" x="16" y="109" width="80" height="34"/>
+                                <rect key="frame" x="16" y="122.66666666666667" width="80" height="20.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="glG-Rb-CBY"/>
                                 </constraints>
@@ -62,20 +62,29 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="저 장"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-nl-rtM">
+                                <rect key="frame" x="16" y="54" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="rJM-T1-anQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.backward.circle" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4aC-DY-CLD" secondAttribute="trailing" constant="150" id="1tw-pq-fyt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aHk-Ku-beU" secondAttribute="trailing" constant="85" id="4Vx-A0-R9A"/>
+                            <constraint firstItem="fhU-nl-rtM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="51U-p0-J1a"/>
                             <constraint firstItem="MP6-jQ-l7V" firstAttribute="bottom" secondItem="W11-yp-6u9" secondAttribute="bottom" id="7zQ-uf-1zH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4aC-DY-CLD" secondAttribute="bottom" constant="50" id="Drc-9c-Z5p"/>
                             <constraint firstItem="4aC-DY-CLD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="150" id="EuQ-Cv-sAu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ka2-h2-V13" secondAttribute="trailing" constant="16" id="IAM-aa-d2m"/>
                             <constraint firstItem="on1-oV-FWk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="KVw-AI-HEn"/>
+                            <constraint firstItem="on1-oV-FWk" firstAttribute="top" secondItem="fhU-nl-rtM" secondAttribute="bottom" constant="33.666666666666686" id="LFL-52-6Bo"/>
                             <constraint firstItem="MP6-jQ-l7V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Lyo-1c-BbO"/>
                             <constraint firstItem="ka2-h2-V13" firstAttribute="leading" secondItem="on1-oV-FWk" secondAttribute="trailing" constant="32" id="Msb-7r-Csz"/>
-                            <constraint firstItem="on1-oV-FWk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="Nph-S1-Is2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6V4-GQ-iWV" secondAttribute="trailing" constant="16" id="PPf-K5-ou2"/>
                             <constraint firstItem="aHk-Ku-beU" firstAttribute="top" secondItem="6V4-GQ-iWV" secondAttribute="bottom" constant="50" id="QF7-Qz-nVS"/>
                             <constraint firstItem="4aC-DY-CLD" firstAttribute="top" secondItem="aHk-Ku-beU" secondAttribute="bottom" constant="30" id="Xh8-MH-vgo"/>
@@ -89,16 +98,19 @@
                             <constraint firstItem="6V4-GQ-iWV" firstAttribute="leading" secondItem="W11-yp-6u9" secondAttribute="leading" id="jVj-cJ-ZNp"/>
                             <constraint firstItem="W11-yp-6u9" firstAttribute="top" secondItem="ka2-h2-V13" secondAttribute="bottom" constant="50" id="lbq-8V-fiK"/>
                             <constraint firstItem="MP6-jQ-l7V" firstAttribute="top" secondItem="on1-oV-FWk" secondAttribute="bottom" constant="50" id="nEz-TG-h5q"/>
+                            <constraint firstItem="fhU-nl-rtM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="noB-Rr-nUK"/>
                             <constraint firstItem="aHk-Ku-beU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="tLw-iW-Tgf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W11-yp-6u9" secondAttribute="trailing" constant="16" id="wvg-E9-a3V"/>
                             <constraint firstItem="on1-oV-FWk" firstAttribute="bottom" secondItem="ka2-h2-V13" secondAttribute="bottom" id="zeT-XG-6jc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="fhU-nl-rtM" id="wa0-Ey-HiW"/>
                         <outlet property="friendNameTextField" destination="ka2-h2-V13" id="PZy-gB-dVD"/>
                         <outlet property="petImageView" destination="aHk-Ku-beU" id="aDq-uO-tK2"/>
                         <outlet property="petNameTextField" destination="W11-yp-6u9" id="6y5-DY-GMt"/>
                         <outlet property="petSpeciesPicker" destination="6V4-GQ-iWV" id="dlm-DE-arz"/>
+                        <outlet property="saveButton" destination="4aC-DY-CLD" id="DJS-IT-kgw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,6 +119,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.backward.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
