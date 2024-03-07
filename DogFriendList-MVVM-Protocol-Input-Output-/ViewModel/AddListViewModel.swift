@@ -31,14 +31,14 @@ class AddListViewModel: ViewModelType {
                 self?.friendName = friendName
             })
             .disposed(by: disposeBag)
-
+        
         input.petname
             .asObservable()
             .subscribe(onNext: { [weak self] petname in
                 self?.petname = petname
             })
             .disposed(by: disposeBag)
-    
+        
         return Output(selectedValue: selectedValue,
                       saveButtonTap: input.saveButtonTap,
                       backBUttonTap: input.backBUttonTap)
@@ -104,7 +104,7 @@ class AddListViewModel: ViewModelType {
             return false
         }
     }
-
+    
     private func getSpeciesData() -> Species {
         var species: Species = .dog
         _ = selectedValue.subscribe(onNext: { value in
@@ -132,7 +132,7 @@ class AddListViewModel: ViewModelType {
         })
         return species
     }
-
+    
     private func defineSpeciesFromPet(_ pet: Pet) -> Pet {
         var petCopy = pet
         _ = selectedValue.subscribe(onNext: { value in
@@ -160,7 +160,7 @@ class AddListViewModel: ViewModelType {
         })
         return petCopy
     }
-
+    
     func backToPreviousView(view:UIViewController) {
         view.dismiss(animated: true)
     }
