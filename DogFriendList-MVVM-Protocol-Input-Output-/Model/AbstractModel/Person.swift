@@ -9,9 +9,9 @@ import Foundation
 
 class Person: Animal {
     var name: String
-    var pet: [Pet]
+    var pet: [Animal]
     
-    init(name: String, pet: [Pet]) {
+    init(name: String, pet: [Animal]) {
         self.name = name
         self.pet = pet
     }

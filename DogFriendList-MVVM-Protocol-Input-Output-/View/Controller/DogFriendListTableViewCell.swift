@@ -16,7 +16,7 @@ class DogFriendListTableViewCell: UITableViewCell {
     private var disposeBag = DisposeBag()
     var eatActionData: ((String) -> Void)?
     var walkActionData: ((String) -> Void)?
-    var pet: Pet? {
+    var pet: Animal? {
         didSet {
             configure()
         }
