@@ -1,11 +1,9 @@
 # DogFriendList-MVVM-Protocol-Input-Output-
 
 ## MVVM - Protocol Input Output 의 디자인 패턴 + 객체지향의 특징을 살린 간단한 앱
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-08 at 11 43 06](https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/1b5d1065-bd14-4b5b-a48e-06a602c51ca1)
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-08 at 11 43 01](https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/c06f2764-d6b2-4838-8f9e-556731aab6c4)
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-08 at 11 42 52](https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/14b7c763-2774-4648-9d80-a415379ca743)
-
-
+<img src="https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/1b5d1065-bd14-4b5b-a48e-06a602c51ca1" alt="Simulator Screenshot - iPhone 15 Pro - 2024-02-27 at 15 12 10" width="250" height="500">
+<img src="https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/c06f2764-d6b2-4838-8f9e-556731aab6c4" alt="Simulator Screenshot - iPhone 15 Pro - 2024-02-27 at 15 12 10" width="250" height="500">
+<img src="https://github.com/kwangjo93/DogFriendList-MVVM-Protocol-Input-Output-/assets/125628009/14b7c763-2774-4648-9d80-a415379ca743" alt="Simulator Screenshot - iPhone 15 Pro - 2024-02-27 at 15 12 10" width="250" height="500">
 
 ## 1. MVVM - Protocol Input Output
 - 한 단계 더 발전된 MVVM 디자인 패턴
