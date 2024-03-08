@@ -44,7 +44,7 @@ class AddListViewModel: ViewModelType {
                       backBUttonTap: input.backBUttonTap)
     }
     
-    var listData: [Person] = []
+    private var listData: [Person] = []
     var selectedValue = BehaviorSubject<String?>(value: nil)
     var disposeBag: DisposeBag = DisposeBag()
     var observableListData: BehaviorSubject<[Person]>
