@@ -28,4 +28,5 @@ final class DogFriendListViewModel: ViewModelType {
     
     var disposeBag: DisposeBag = DisposeBag()
     var observableListData: BehaviorSubject<[Person]> = BehaviorSubject(value: [])
+    var listData: [Person] = []
 }

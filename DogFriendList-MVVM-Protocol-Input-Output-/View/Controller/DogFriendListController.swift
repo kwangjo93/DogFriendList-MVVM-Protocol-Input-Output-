@@ -42,6 +42,7 @@ class DogFriendListController: UIViewController {
         output.listData
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] data in
+                self?.dogFriendListVM.listData = data
                 self?.petListTableView.reloadData()
             })
             .disposed(by: disposeBag)
@@ -62,7 +63,7 @@ class DogFriendListController: UIViewController {
 extension DogFriendListController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        let pet = addListVM.listData[section].pet
+        let pet = dogFriendListVM.listData[section].pet
         return pet.count
     }
     
@@ -70,7 +71,7 @@ extension DogFriendListController: UITableViewDataSource, UITableViewDelegate {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DogFriendListTableViewCell.identifier,
                                                  for: indexPath) as! DogFriendListTableViewCell
-        let person = addListVM.listData[indexPath.section]
+        let person = dogFriendListVM.listData[indexPath.section]
         let pet = person.pet[indexPath.row]
         cell.pet = pet
         cell.eatActionData = { [weak self] data in
@@ -83,11 +84,11 @@ extension DogFriendListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return addListVM.listData.count
+        return dogFriendListVM.listData.count
     }
     
     func tableView(_ tableView: UITableView,
                    titleForHeaderInSection section: Int) -> String? {
-        return addListVM.listData[section].name
+        return dogFriendListVM.listData[section].name
     }
 }
