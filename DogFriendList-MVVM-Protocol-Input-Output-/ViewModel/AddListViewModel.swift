@@ -133,7 +133,7 @@ class AddListViewModel: ViewModelType {
         return species
     }
     
-    private func defineSpeciesFromPet(_ pet: Pet) -> Pet {
+    private func defineSpeciesFromPet(_ pet: Pet) -> Animal {
         var petCopy = pet
         _ = selectedValue.subscribe(onNext: { value in
             let selectedValue = value

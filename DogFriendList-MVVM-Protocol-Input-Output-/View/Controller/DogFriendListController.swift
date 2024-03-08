@@ -71,7 +71,6 @@ extension DogFriendListController: UITableViewDataSource, UITableViewDelegate {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DogFriendListTableViewCell.identifier,
                                                  for: indexPath) as! DogFriendListTableViewCell
-
         let person = dogFriendListVM.listData[indexPath.section]
         let pet = person.pet[indexPath.row]
         cell.pet = pet
